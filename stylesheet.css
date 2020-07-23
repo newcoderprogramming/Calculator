@@ -91,11 +91,11 @@
 
 }
 
-@media (max-width:999px) {
+@media (max-width:899px) {
 
 
   body{
-    background-color: #001433;
+    background-color: red;
   }
 
   button{
