@@ -18,63 +18,60 @@
 
   <table>
 
-    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
-    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
-    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
 
 
-    <th>
       <div>
         <table class="operations">
           <tr>
+
             <td><button type="button" name="button" onclick="takeOperator(0)" class="inputOperators">+</button></td>
             <td><button type="button" name="button" onclick="takeOperator(1)" class="inputOperators">-</button></td>
             <td><button type="button" name="button" onclick="takeOperator(2)" class="inputOperators">*</button></td>
             <td><button type="button" name="button" onclick="takeOperator(3)" class="inputOperators">/</button> </td>
+            <td><button type="button" name="button" onclick="percentage()" class="inputOperators">%</button> </td>
+            <td><button type="button" name="button" onclick="square()" class="inputOperators">x&sup2;</button> </td>  <!--x^2-->
+            <td><button type="button" name="button" onclick="cube()" class="inputOperators">x&sup3;</button> </td> <!--x^3-->
             <td><button type="button" name="button" onclick="takeOperator(4)" class="inputOperators">x<sup>y</sup> </button></td>
-            <td><button type="button" name="button" onclick="takeOperator(17)" class="inputOperators">x&sup2;</button> </td>  <!--x^2-->
-            <td><button type="button" name="button" onclick="takeOperator(18)" class="inputOperators">x&sup3;</button> </td> <!--x^3-->
-            <td><button type="button" name="button" onclick="takeOperator(21)" class="inputOperators">10<sup>x</sup></button></td>
-
+            <td><button type="button" name="button" onclick="powerOfTen()" class="inputOperators">10<sup>x</sup></button></td>
+            <td><button type="button" name="button" onclick="powerOfTwo()" class="inputOperators">2<sup>x</sup></button></td>
 
           </tr>
 
             <tr>
-              <td><button type="button" name="button" onclick="takeOperator(5)" class="inputOperators">&#8730;</button> </td> <!--sqrt-->
-              <td><button type="button" name="button" onclick="takeOperator(19)" class="inputOperators">&#8731;</button></td> <!--cubeRoot-->
-              <td><button type="button" name="button" onclick="takeOperator(20)" class="inputOperators">&#8732;</button></td> <!--fourthRoot-->
-              <td><button type="button" name="button" onclick="takeOperator(6)" class="inputOperators">1/x</button> </td>
-              <td><button type="button" name="button" onclick="takeOperator(7)"   class="inputOperators">x!</button></td>
-              <td><button type="button" name="button" onclick="takeOperator(15)" class="inputOperators" id='lnlog'>ln</button></td>
-              <td><button type="button" name="button" onclick="takeOperator(11)"class="inputOperators">e</button></td>
+
+              <td><button type="button" name="button" onclick="squareRoot()" class="inputOperators">&#8730;</button> </td> <!--sqrt-->
+              <td><button type="button" name="button" onclick="cubeRoot()" class="inputOperators">&#8731;</button></td> <!--cubeRoot-->
+              <td><button type="button" name="button" onclick="fourthRoot()" class="inputOperators">&#8732;</button></td> <!--fourthRoot-->
+              <td><button type="button" name="button" onclick="inverse()" class="inputOperators">x<sup>-1</sup></button> </td>
+              <td><button type="button" name="button" onclick="takeOperator(5)" class="inputOperators">x<sup>-n</sup></button> </td>
+              <td><button type="button" name="button" onclick="factorial()"   class="inputOperators">x!</button></td>
+              <td><button type="button" name="button" onclick="logln()" class="inputOperators" id='lnlog'>ln</button></td>
+              <td><button type="button" name="button" onclick="e()"class="inputOperators">e</button></td>
               <td><button type="button" name="button" onclick="change()" class="inputOperators">#</button></td>
+              <td><button type="button" name="button" onclick="previous()" class="inputOperators">P</button></td>
+
             </tr>
-        </table>
 
-        <table>
           <tr>
-            <td><button type="button" name="button" onclick="takeOperator(8)"  class="inputOperators" id='sinOrsini'>sin</button></td>
-            <td><button type="button" name="button" onclick="takeOperator(9)"  class="inputOperators" id='cosOrcosi'>cos</button></td>
-            <td><button type="button" name="button" onclick="takeOperator(10)" class="inputOperators" id='tanOrtani'>tan</button></td>
-            <td><button type="button" name="button" onclick="takeOperator(12)" class="inputOperators" id='sinhOrsinhi'>sinh</button></td>
-            <td><button type="button" name="button" onclick="takeOperator(13)" class="inputOperators" id='coshOrcoshi'>cosh</button></td>
-            <td><button type="button" name="button" onclick="takeOperator(14)" class="inputOperators" id='tanhOrtanhi'>tanh</button></td>
-            <td><button type="button" name="button" onclick="takeOperator(16)" class="inputOperators">&#8508;</button></td>
 
+            <td><button type="button" name="button" onclick="sinx()"  class="inputOperators" id='sinOrsini'>sin</button></td>
+            <td><button type="button" name="button" onclick="cosx()"  class="inputOperators" id='cosOrcosi'>cos</button></td>
+            <td><button type="button" name="button" onclick="tanx()" class="inputOperators" id='tanOrtani'>tan</button></td>
+            <td><button type="button" name="button" onclick="sinh()" class="inputOperators" id='sinhOrsinhi'>sinh</button></td>
+            <td><button type="button" name="button" onclick="cosh()" class="inputOperators" id='coshOrcoshi'>cosh</button></td>
+            <td><button type="button" name="button" onclick="tanh()" class="inputOperators" id='tanhOrtanhi'>tanh</button></td>
+            <td><button type="button" name="button" onclick="pi()" class="inputOperators">&#8508;</button></td>
+            <td><button type="button" name="button" onclick="ePower()" class="inputOperators">e<sup>x</sup></button> </td>
+            <td><button type="button" name="button" onclick="backSpace()" class="inputOperators">B</button></td>
             <td><button type="button" name="button" onclick="clearTheSpace()" class="inputOperators" id='clear'>AC</button></td>
-
-
 
           </tr>
         </table>
 
       </div>
 
-    </th>
-    <th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+<br><br>
 
-
-    <th>
       <div class="input">
       <table>
         <tr>
@@ -108,7 +105,6 @@
     </div>
 
 
-  </th>
 
 
   </table>
@@ -130,17 +126,18 @@
      var b = [];
      var c = [];
      var expression = [];
-     var inputNumbers=[7,8,9,4,5,6,1,2,3,0];
-     var operators=['+','-','*','/','^','&#8730','1/x','x!','sin','cos','tan','e','sinh','cosh','tanh','ln'];
-     var j=k=tadd=tsub=0;
-     var summOfFraction=0;
-
+     var inputNumbers = [7,8,9,4,5,6,1,2,3,0];
+     var j = k = tadd = tsub = 0;
+     var summOfFraction = 0;
+     var dcount = 1;
      var y;
-     var summ=countNumbers=countBackSpace=countForPower=0.0;
-     var d =1;
-     var decimalCount=0;
+     var summ = countNumbers = countBackSpace = countForPower =nICount= 0;
+     var d =tt =1;
+     var decimalCount = 0;
      var s = x = t= 1;
-     var i=1;
+     var i = 1;
+     var prevv = [];
+     var prev;
      var r = a.length;
      var minusInitial=0;
      var m=0;
@@ -151,49 +148,51 @@
 
     function takeInput(k){
       document.getElementById('clear').innerHTML='C'
-
-      // if(minusInitial!=0){
-      //   var w =
-      // }
-
       this.k = k;
-      r = document.getElementById("result").innerHTML;
       var x = document.getElementsByClassName('n')[k].innerHTML
       for(i=0;i<inputNumbers.length;i++){
           if (x == inputNumbers[i]) {
               break;
           }
         }
-
        if(decimalCount==0){
           y=createNumber(i);
         }
-
-        else {
-
+       else {
           y=createFractionalNumber(y,i);
         }
-
-
       document.querySelector('#result').innerHTML=y;
       countNumbers++;
     }
 
+
     function createNumber(i){
-      summ = inputNumbers[i] + summ*10;
+      if(countBackSpace>0){
+        var t = document.getElementById('result').innerHTML;
+        summ=t;
+        summ =  inputNumbers[i] + summ*10;
+        countBackSpace=0;
+      }
+     else{
+        summ = inputNumbers[i] + summ*10;
+     }
       return summ;
     }
 
     function createFractionalNumber(y,i){
       d=d/10;
-      summOfFraction = parseFloat(y) + (d)*inputNumbers[i]
+      dcount=dcount*10;
+      var t = document.getElementById('result').innerHTML;
+      if(countBackSpace>0 && d!=1){
+        summOfFraction = t + parseFloat(inputNumbers[i])
+
+      }
+      else{
+        summOfFraction = parseFloat(y) + (d)*inputNumbers[i]
+
+      }
       return summOfFraction;
     }
-
-
-
-
-
 
 
 
@@ -228,84 +227,16 @@
           powerTheNumbers();
         }
 
-        else if(k==5){
-          b.push('x^1/2');
-          squareRoot();
+        if(k == 5){
+          b.push('^-n');
+          inverseNth();
         }
 
-        else if(k == 6){
-          b.push('1/x');
-          inverse();
-        }
 
-        else if(k == 7){
-          b.push('!');
-          factorial();
-        }
 
-        else if(k == 8){
-          b.push('sin()');
-          sinx();
-        }
 
-        else if(k == 9){
-          b.push('cos()');
-          cosx();
-        }
 
-        else if(k == 10){
-          b.push('tan()');
-          tanx();
-        }
 
-        else if(k == 11){
-          document.querySelector('#result').innerHTML=2.718281828459045;
-        }
-
-        else if(k == 12){
-          b.push('sinh()')
-          sinh();
-        }
-
-        else if(k == 13){
-          b.push('cosh()')
-          cosh();
-        }
-
-        else if(k == 14){
-          b.push('tanh()')
-          tanh();
-        }
-
-        else if(k == 15){
-          b.push('logln()')
-          logln();
-        }
-
-        else if(k==16){
-          document.querySelector('#result').innerHTML=3.141592653589793238;
-        }
-
-        else if(k==17){
-
-          square();
-        }
-
-        else if(k == 18){
-          cube();
-        }
-
-        else if(k == 19){
-          cubeRoot();
-        }
-
-        else if(k == 20){
-          fourthRoot();
-        }
-
-        else if(k == 21){
-          powerOfTen();
-        }
 
     }
 
@@ -318,6 +249,7 @@
       summ=0;
       summOfFraction=0;
       decimalCount=0;
+      countBackSpace=0
       d=1;
       a.push(tadd);
 
@@ -331,24 +263,14 @@
       tsub=(-1)*tsub;
       summ=0;
       summOfFraction=0;
+      countBackSpace=0
       decimalCount=0;
       d=1;
       a.push(tsub);
       return tsub;
     }
 
-    // function minusInitial(){
-    //   var minusSign = -1;
-    //   w = (-1)*w;
-    //   alert(w)
-    //   var w = document.getElementById('result').innerHTML;
-    //
-    //   document.querySelector('#result').innerHTML=w;
-    //   summ=0;
-    //   summOfFraction=0;
-    //   decimalCount=0;
-    //   d=1;
-    // }
+
 
     function multiply(){
       var w = document.getElementById("result").innerHTML;
@@ -356,6 +278,7 @@
       document.querySelector("#result").innerHTML=s;
       summ=0;
       summOfFraction=0;
+      countBackSpace=0
       decimalCount=0;
       d=1;
       a.push(s);
@@ -377,28 +300,34 @@
       j++;
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0
       d=1;
       return s;
     }
 
     function powerTheNumbers(){
+
       var w = document.getElementById("result").innerHTML;
 
       if(countForPower==0){
         t = Math.pow(w,1);
+        document.querySelector('#result').innerHTML=w;
+
       }
       else{
         var tw = Math.pow(t,w)
+        document.querySelector('#result').innerHTML=tw;
+
       }
 
       summ=0;
+      countBackSpace=0
       countForPower++;
-      document.querySelector('#result').innerHTML=w;
       return tw;
     }
 
     function squareRoot(){
+      document.getElementById('clear').innerHTML='C'
       var w = document.getElementById("result").innerHTML;
       if(w<0){
         w=(-1)*w;
@@ -412,16 +341,20 @@
         document.querySelector("#result").innerHTML=w;
       }
       a.push(w);
+      countBackSpace=0
     }
 
     function inverse(){
+      document.getElementById('clear').innerHTML='C'
       var w = document.getElementById('result').innerHTML;
       w = 1/w;
       document.querySelector('#result').innerHTML=w;
+      countBackSpace=0
       return w;
     }
 
     function factorial(){
+
       var fact=1;
       var i;
       var w = document.getElementById('result').innerHTML;
@@ -431,11 +364,12 @@
       document.querySelector("#result").innerHTML=fact;
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0
       d=1;
     }
 
     function sinx(){
+      document.getElementById('clear').innerHTML='C'
       var w = document.getElementById('result').innerHTML;
 
       var signn = document.getElementById('sinOrsini').innerHTML;
@@ -453,11 +387,12 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0
       d=1;
     }
 
     function cosx(){
+      document.getElementById('clear').innerHTML='C'
       var w = document.getElementById('result').innerHTML;
 
       var signn = document.getElementById('cosOrcosi').innerHTML;
@@ -484,11 +419,12 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0
       d=1;
     }
 
     function tanx(){
+      document.getElementById('clear').innerHTML='C'
       var w = document.getElementById('result').innerHTML;
 
       var signn = document.getElementById('tanOrtani').innerHTML;
@@ -508,18 +444,20 @@
 
       else{
         w = Math.atan(w);
-        w = w * 180/3.141592653589793238
+        w = w * 180/3.141592653589793238;
       }
 
       document.querySelector('#result').innerHTML=w;
       a.push(w);
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
     function sinh(){
+      document.getElementById('clear').innerHTML='C'
+
       var w = document.getElementById('result').innerHTML;
       var signn = document.getElementById('sinhOrsinhi').innerHTML;
 
@@ -535,11 +473,13 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
     function cosh(){
+      document.getElementById('clear').innerHTML='C'
+
       var w = document.getElementById('result').innerHTML;
       var signn = document.getElementById('coshOrcoshi').innerHTML;
 
@@ -556,11 +496,13 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
     function tanh(){
+      document.getElementById('clear').innerHTML='C'
+
       var w = document.getElementById('result').innerHTML;
       var signn = document.getElementById('tanOrtani').innerHTML;
 
@@ -578,11 +520,13 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
     function logln(){
+      document.getElementById('clear').innerHTML='C'
+
       var w = document.getElementById('result').innerHTML;
 
       var signn = document.getElementById('lnlog').innerHTML;
@@ -598,7 +542,7 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
@@ -608,7 +552,7 @@
       document.querySelector('#result').innerHTML=w;
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
@@ -618,7 +562,7 @@
       document.querySelector('#result').innerHTML=w;
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
@@ -628,7 +572,7 @@
       document.querySelector('#result').innerHTML=w;
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
@@ -638,12 +582,13 @@
       document.querySelector('#result').innerHTML=w;
       summ=0;
       summOfFraction=0;
-      decimalCount=0;
+      countBackSpace=0;
       d=1;
     }
 
     function fractional(){
       decimalCount++;
+
     }
 
     function powerOfTen(){
@@ -652,10 +597,13 @@
       document.querySelector('#result').innerHTML=w;
     }
 
+    function powerOfTwo(){
+      var w = document.getElementById('result').innerHTML;
+      w = Math.pow(2,w);
+      document.querySelector('#result').innerHTML=w;
+    }
+
     function change(){
-
-
-
       m++;
 
       var q = Math.pow(-1,m);
@@ -681,6 +629,56 @@
 
       }
 
+    }
+
+    function previous(){
+      if(prev==null){
+        prev=0
+      }
+      document.querySelector('#result').innerHTML=prev;
+    }
+
+    function percentage(){
+      var w = document.getElementById('result').innerHTML;
+      w = w/100;
+      document.querySelector('#result').innerHTML=w;
+      summ=0;
+    }
+
+    function inverseNth(){
+
+      var w = document.getElementById('result').innerHTML;
+
+      if(nICount==0){
+        w = Math.pow(w,t);
+        tt = w;
+      }
+      else{
+        w = Math.pow(tt,-w);
+      }
+      nICount++;
+      document.querySelector('#result').innerHTML=w;
+      summ=0;
+      return w;
+    }
+
+    function e(){
+      document.getElementById('clear').innerHTML='C'
+      document.querySelector('#result').innerHTML=2.718281828459045;
+      summ=0;
+    }
+
+    function ePower(){
+      var w = document.getElementById('result').innerHTML;
+      w = Math.pow(2.718281828459045,w)
+      document.querySelector('#result').innerHTML=w;
+      summ=0;
+    }
+
+    function pi(){
+      document.getElementById('clear').innerHTML='C'
+      document.querySelector('#result').innerHTML=3.141592653589793238;
+      summ=0;
     }
 
 
@@ -709,13 +707,16 @@
     function result(){
       var sign = b.pop();
       b.push(sign)
-      // alert(b)
+
       var r;
       r=parseFloat(r)
       if(sign == "+"){
         r = add();
         document.querySelector('#result').innerHTML=r;
         tadd=tsub=j=countForPower=0;
+        countBackSpace=
+        decimalCount=0;
+        nICount=0
         d=s=1;
       }
 
@@ -724,6 +725,11 @@
         document.querySelector('#result').innerHTML=r;
         tadd=tsub=j=countForPower=0;
         d=s=1;
+        countBackSpace=0
+        decimalCount=0;
+        nICount=0;
+
+
       }
 
       else if(sign == '*'){
@@ -731,6 +737,11 @@
         document.querySelector('#result').innerHTML=r;
         tadd=tsub=countForPower=j=0;
         d=s=1;
+        countBackSpace=0
+        decimalCount=0;
+        nICount=0;
+
+
       }
 
       else if(sign == '/' ){
@@ -738,11 +749,22 @@
         document.querySelector('#result').innerHTML=r;
         tadd=tsub=countForPower=j=0;
         d=s=1;
+        countBackSpace=0
+        decimalCount=0;
+        nICount=0;
+
+
       }
 
-      else if(sign == '1/x'){
-        r = inverse();
+      else if(sign == '^-n'){
+        r = inverseNth();
         document.querySelector('#result').innerHTML=r;
+        tadd=tsub=countForPower=j=0;
+        d=s=1;
+        countBackSpace=0
+        decimalCount=0;
+
+        nICount=0;
       }
 
       else if(sign == '^'){
@@ -750,6 +772,11 @@
         document.querySelector('#result').innerHTML=r;
         tadd=tsun=j=countForPower=0;
         s=1;
+        countBackSpace=0;
+        decimalCount=0;
+        nICount=0;
+
+
       }
 
       else{
@@ -757,21 +784,51 @@
 
     }
 
+    function backSpace(){
+      var w = document.getElementById('result').innerHTML;
+      var ww=1;
+      if(decimalCount>0){
+        while(Number.isInteger(w)!=1){
+          w = w*10;
+          ww=ww*10;
+        }
+        w=parseInt(w/10);
+        w=w*10/ww;
+
+        document.querySelector('#result').innerHTML=w;
+      }
+      else{
+        w = parseInt(w/10);
+        document.querySelector('#result').innerHTML=w;
+      }
+      w=1;
+      countBackSpace++;
+
+    }
+
+
+
+
+
+
+
     function clearTheSpace(){
+      prev=a.pop()
      summ=0;
      for(var i=0;i<a.length;i++){
-       a = []
+       a = [];
      }
      for(var i=0;i<b.length;i++){
        b = [];
      }
-    j=k=tadd=tsub=0;
+    nICount=j=k=tadd=tsub=0;
 
-summOfFraction=0;
+    summOfFraction=0;
     decimalCount=0;
     d=1;
-      summOfFraction=0;
-      decimalCount=0;
+    summOfFraction=0;
+    decimalCount=0;
+    countBackSpace=0;
 
     s = x = 1;
     summ=countNumbers=countBackSpace=countForPower=0;
