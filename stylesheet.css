@@ -91,11 +91,11 @@
 
 }
 
-@media only screen and (max-width:999px) {
+@media only screen and (max-width:899px) {
 
 
   body{
-    background-color: red;
+    background-color: #001433;
   }
 
   button{
