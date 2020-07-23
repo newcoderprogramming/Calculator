@@ -1,4 +1,4 @@
-@media (min-width:1000px) {
+@media (min-width:900px) {
   body{
     background-color: #001433;
   }
@@ -91,7 +91,7 @@
 
 }
 
-@media (max-width:899px){
+@media (max-width: 899px){
 
 
   body{
