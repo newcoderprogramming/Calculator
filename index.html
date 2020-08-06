@@ -20,8 +20,8 @@
 
 
 
-      <div>
-        <table class="operations">
+      <div class="operations">
+        <table >
           <tr>
 
             <td><button type="button" name="button" onclick="takeOperator(0)" class="inputOperators">+</button></td>
@@ -29,11 +29,17 @@
             <td><button type="button" name="button" onclick="takeOperator(2)" class="inputOperators">*</button></td>
             <td><button type="button" name="button" onclick="takeOperator(3)" class="inputOperators">/</button> </td>
             <td><button type="button" name="button" onclick="percentage()" class="inputOperators">%</button> </td>
+            <td><button type="button" name="button" onclick="clearTheSpace()" class="inputOperators" id='clear'>AC</button></td>
+
+          </tr>
+          <tr>
             <td><button type="button" name="button" onclick="square()" class="inputOperators">x&sup2;</button> </td>  <!--x^2-->
             <td><button type="button" name="button" onclick="cube()" class="inputOperators">x&sup3;</button> </td> <!--x^3-->
             <td><button type="button" name="button" onclick="takeOperator(4)" class="inputOperators">x<sup>y</sup> </button></td>
             <td><button type="button" name="button" onclick="powerOfTen()" class="inputOperators">10<sup>x</sup></button></td>
             <td><button type="button" name="button" onclick="powerOfTwo()" class="inputOperators">2<sup>x</sup></button></td>
+            <td><button type="button" name="button" onclick="ePower()" class="inputOperators">e<sup>x</sup></button> </td>
+
 
           </tr>
 
@@ -44,9 +50,15 @@
               <td><button type="button" name="button" onclick="fourthRoot()" class="inputOperators">&#8732;</button></td> <!--fourthRoot-->
               <td><button type="button" name="button" onclick="inverse()" class="inputOperators">x<sup>-1</sup></button> </td>
               <td><button type="button" name="button" onclick="takeOperator(5)" class="inputOperators">x<sup>-n</sup></button> </td>
+              <td><button type="button" name="button" onclick="backSpace()" class="inputOperators">B</button></td>
+
+            </tr>
+            <tr>
               <td><button type="button" name="button" onclick="factorial()"   class="inputOperators">x!</button></td>
               <td><button type="button" name="button" onclick="logln()" class="inputOperators" id='lnlog'>ln</button></td>
               <td><button type="button" name="button" onclick="e()"class="inputOperators">e</button></td>
+              <td><button type="button" name="button" onclick="pi()" class="inputOperators">&#8508;</button></td>
+
               <td><button type="button" name="button" onclick="change()" class="inputOperators">#</button></td>
               <td><button type="button" name="button" onclick="previous()" class="inputOperators">P</button></td>
 
@@ -60,12 +72,9 @@
             <td><button type="button" name="button" onclick="sinh()" class="inputOperators" id='sinhOrsinhi'>sinh</button></td>
             <td><button type="button" name="button" onclick="cosh()" class="inputOperators" id='coshOrcoshi'>cosh</button></td>
             <td><button type="button" name="button" onclick="tanh()" class="inputOperators" id='tanhOrtanhi'>tanh</button></td>
-            <td><button type="button" name="button" onclick="pi()" class="inputOperators">&#8508;</button></td>
-            <td><button type="button" name="button" onclick="ePower()" class="inputOperators">e<sup>x</sup></button> </td>
-            <td><button type="button" name="button" onclick="backSpace()" class="inputOperators">B</button></td>
-            <td><button type="button" name="button" onclick="clearTheSpace()" class="inputOperators" id='clear'>AC</button></td>
 
           </tr>
+
         </table>
 
       </div>
