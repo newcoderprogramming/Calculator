@@ -9,6 +9,7 @@
   }
 
   fieldset{
+    margin-top: 1%;
     text-align: center;
     color:white;
     font-family: monospace;
@@ -80,7 +81,7 @@
 
   .operations{
     margin-left: 20%;
-    margin-top: -2%;
+    margin-top: -1.5%;
     /* border:2px solid black; */
     margin-right: 50%;
   }
