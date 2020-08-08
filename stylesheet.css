@@ -115,7 +115,7 @@
     text-align: center;
     color:white;
     font-family: monospace;
-    margin-left: 5%;
+    margin-left: 4%;
     border:5px solid black;
     width: 90%;
 
@@ -191,8 +191,8 @@
   .input{
     margin-left: 22%;
     margin-top: 8%;
-    width:50%;
-    border: 2px solid black;
+    width:70%;
+    border: 5px solid black;
   }
 
 
