@@ -36,9 +36,9 @@
             <td><button type="button" name="button" onclick="square()" class="inputOperators">x&sup2;</button> </td>  <!--x^2-->
             <td><button type="button" name="button" onclick="cube()" class="inputOperators">x&sup3;</button> </td> <!--x^3-->
             <td><button type="button" name="button" onclick="takeOperator(4)" class="inputOperators">x<sup>y</sup> </button></td>
-            <td><button type="button" name="button" onclick="powerOfTen()" class="inputOperators">10<sup>x</sup></button></td>
-            <td><button type="button" name="button" onclick="powerOfTwo()" class="inputOperators">2<sup>x</sup></button></td>
-            <td><button type="button" name="button" onclick="ePower()" class="inputOperators">e<sup>x</sup></button> </td>
+            <td><button type="button" name="button" onclick="inverse()" class="inputOperators">x<sup>-1</sup></button> </td>
+            <td><button type="button" name="button" onclick="takeOperator(5)" class="inputOperators">x<sup>-n</sup></button> </td>
+            <td><button type="button" name="button" onclick="backSpace()" class="inputOperators">B</button></td>
 
 
           </tr>
@@ -48,10 +48,9 @@
               <td><button type="button" name="button" onclick="squareRoot()" class="inputOperators">&#8730;</button> </td> <!--sqrt-->
               <td><button type="button" name="button" onclick="cubeRoot()" class="inputOperators">&#8731;</button></td> <!--cubeRoot-->
               <td><button type="button" name="button" onclick="fourthRoot()" class="inputOperators">&#8732;</button></td> <!--fourthRoot-->
-              <td><button type="button" name="button" onclick="inverse()" class="inputOperators">x<sup>-1</sup></button> </td>
-              <td><button type="button" name="button" onclick="takeOperator(5)" class="inputOperators">x<sup>-n</sup></button> </td>
-              <td><button type="button" name="button" onclick="backSpace()" class="inputOperators">B</button></td>
-
+              <td><button type="button" name="button" onclick="powerOfTen()" class="inputOperators">10<sup>x</sup></button></td>
+              <td><button type="button" name="button" onclick="powerOfTwo()" class="inputOperators">2<sup>x</sup></button></td>
+              <td><button type="button" name="button" onclick="ePower()" class="inputOperators">e<sup>x</sup></button> </td>
             </tr>
             <tr>
               <td><button type="button" name="button" onclick="factorial()"   class="inputOperators">x!</button></td>
@@ -139,7 +138,7 @@
      var j = k = tadd = tsub = 0;
      var summOfFraction = 0;
      var dcount = 1;
-     var y;
+     var y,zero=0;
      var summ = countNumbers = countBackSpace = countForPower =nICount= 0;
      var d =tt =1;
      var decimalCount = 0;
@@ -174,7 +173,6 @@
       countNumbers++;
     }
 
-
     function createNumber(i){
       if(countBackSpace>0){
         var t = document.getElementById('result').innerHTML;
@@ -194,10 +192,19 @@
       var t = document.getElementById('result').innerHTML;
       if(countBackSpace>0 && d!=1){
         summOfFraction = t + parseFloat(inputNumbers[i])
-
       }
       else{
-        summOfFraction = parseFloat(y) + (d)*inputNumbers[i]
+
+        if(zero>1){
+          summOfFraction = parseFloat(y) + '.0'
+        }
+        if(zero==0){
+          zero++;
+          summOfFraction = summOfFraction+ parseFloat(t) + d*inputNumbers[i]
+        }
+        else{
+          summOfFraction = parseFloat(y) + (d)*inputNumbers[i]
+        }
 
       }
       return summOfFraction;
@@ -260,6 +267,8 @@
       decimalCount=0;
       countBackSpace=0
       d=1;
+      zero=0;
+
       a.push(tadd);
 
       return tadd;
@@ -275,6 +284,8 @@
       countBackSpace=0
       decimalCount=0;
       d=1;
+      zero=0;
+
       a.push(tsub);
       return tsub;
     }
@@ -290,6 +301,8 @@
       countBackSpace=0
       decimalCount=0;
       d=1;
+      zero=0;
+
       a.push(s);
       return s;
     }
@@ -309,7 +322,9 @@
       j++;
       summ=0;
       summOfFraction=0;
-      countBackSpace=0
+      countBackSpace=0;
+      zero=0;
+
       d=1;
       return s;
     }
@@ -330,7 +345,9 @@
       }
 
       summ=0;
-      countBackSpace=0
+      countBackSpace=0;
+      zero=0;
+
       countForPower++;
       return tw;
     }
@@ -350,7 +367,9 @@
         document.querySelector("#result").innerHTML=w;
       }
       a.push(w);
-      countBackSpace=0
+      countBackSpace=0;
+      zero=0;
+
     }
 
     function inverse(){
@@ -358,7 +377,9 @@
       var w = document.getElementById('result').innerHTML;
       w = 1/w;
       document.querySelector('#result').innerHTML=w;
-      countBackSpace=0
+      countBackSpace=0;
+      zero=0;
+
       return w;
     }
 
@@ -373,7 +394,9 @@
       document.querySelector("#result").innerHTML=fact;
       summ=0;
       summOfFraction=0;
-      countBackSpace=0
+      countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -396,7 +419,9 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      countBackSpace=0
+      countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -428,7 +453,9 @@
       a.push(w);
       summ=0;
       summOfFraction=0;
-      countBackSpace=0
+      countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -461,6 +488,8 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -483,6 +512,8 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -506,6 +537,8 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -530,6 +563,8 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -562,6 +597,8 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -572,6 +609,8 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -582,6 +621,8 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
+
       d=1;
     }
 
@@ -592,10 +633,19 @@
       summ=0;
       summOfFraction=0;
       countBackSpace=0;
+      zero=0;
       d=1;
     }
 
     function fractional(){
+
+      var w = document.getElementById('result').innerHTML;
+      if(w==0){
+        document.querySelector('#result').innerHTML='0'+'.'
+      }
+      else{
+        document.querySelector('#result').innerHTML=w+'.'
+      }
       decimalCount++;
 
     }
@@ -645,6 +695,8 @@
         prev=0
       }
       document.querySelector('#result').innerHTML=prev;
+      zero=0;
+
     }
 
     function percentage(){
@@ -652,6 +704,8 @@
       w = w/100;
       document.querySelector('#result').innerHTML=w;
       summ=0;
+      zero=0;
+
     }
 
     function inverseNth(){
@@ -668,13 +722,18 @@
       nICount++;
       document.querySelector('#result').innerHTML=w;
       summ=0;
+      zero=0;
+
       return w;
+
     }
 
     function e(){
       document.getElementById('clear').innerHTML='C'
       document.querySelector('#result').innerHTML=2.718281828459045;
       summ=0;
+      zero=0;
+
     }
 
     function ePower(){
@@ -682,12 +741,16 @@
       w = Math.pow(2.718281828459045,w)
       document.querySelector('#result').innerHTML=w;
       summ=0;
+      zero=0;
+
     }
 
     function pi(){
       document.getElementById('clear').innerHTML='C'
       document.querySelector('#result').innerHTML=3.141592653589793238;
       summ=0;
+      zero=0;
+
     }
 
 
@@ -727,6 +790,8 @@
         decimalCount=0;
         nICount=0
         d=s=1;
+        zero=0;
+
       }
 
       else if(sign == '-' ){
@@ -737,6 +802,7 @@
         countBackSpace=0
         decimalCount=0;
         nICount=0;
+        zero=0;
 
 
       }
@@ -749,6 +815,7 @@
         countBackSpace=0
         decimalCount=0;
         nICount=0;
+        zero=0;
 
 
       }
@@ -761,6 +828,7 @@
         countBackSpace=0
         decimalCount=0;
         nICount=0;
+        zero=0;
 
 
       }
@@ -772,7 +840,7 @@
         d=s=1;
         countBackSpace=0
         decimalCount=0;
-
+        zero=0;
         nICount=0;
       }
 
@@ -784,6 +852,8 @@
         countBackSpace=0;
         decimalCount=0;
         nICount=0;
+        zero=0;
+
 
 
       }
@@ -838,7 +908,7 @@
     summOfFraction=0;
     decimalCount=0;
     countBackSpace=0;
-
+    zero=0;
     s = x = 1;
     summ=countNumbers=countBackSpace=countForPower=0;
     document.querySelector('#result').innerHTML=summ;
