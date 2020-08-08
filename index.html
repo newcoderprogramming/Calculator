@@ -195,14 +195,15 @@
       }
       else{
 
-        if(zero>1){
-          summOfFraction = parseFloat(y) + '.0'
+        if(zero>0){
+          summOfFraction = summOfFraction + '.0'
         }
-        if(zero==0){
+        else if(zero==0){
           zero++;
           summOfFraction = summOfFraction+ parseFloat(t) + d*inputNumbers[i]
         }
         else{
+
           summOfFraction = parseFloat(y) + (d)*inputNumbers[i]
         }
 
