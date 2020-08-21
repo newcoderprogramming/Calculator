@@ -39,7 +39,6 @@
 
   .inputOperators{
     font-family: monospace;
-
     border-radius: 50%;
     width : 80px;
     height : 80px;
@@ -58,40 +57,21 @@
     border: 2px solid #000a1a;
     color:black
   }
-  table{
-    border-collapse:separate;
-  }
-
-  .matrixOPerationTable{
-
-
-    margin-left:43%;
-    margin-top:10%;
-
-  }
-
-  .matrixOPeration{
-    border-radius: 20%;
-    width: 200%;
-    padding: 15%;
-    background-color: #003333;
-    color : white;
-    font-family: monospace;
-  }
 
   .operations{
-    margin-left: 20%;
-    margin-top: -1.5%;
-    /* border:2px solid black; */
+    display: grid;
+    margin-left: 23%;
+    margin-top: 1.5%;
+    grid-template-columns: auto auto auto auto auto auto;
     margin-right: 50%;
   }
 
   .input{
     margin-left: 60%;
-    margin-top: -32%;
-    margin-right: 20%;
-    /* border:2px solid black; */
-
+    margin-top: -27%;
+    margin-right: 32%;
+    display:grid;
+    grid-template-columns: auto auto auto;
 
   }
 
@@ -180,6 +160,8 @@
   }
 
   .operations{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
     margin-left: 4%;
     margin-top: -7%;
     width:60%;
@@ -191,6 +173,11 @@
     margin-left: 22%;
     margin-top: -2%;
     width:60%;
+    display:grid;
+    grid-template-columns: auto auto auto;
+
+
+
   }
 
 
