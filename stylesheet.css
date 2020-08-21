@@ -128,8 +128,8 @@
     color : white;
     font-family: monospace;
     font-size: 270%;
-    width : 180px;
-    height : 180px;
+    width : 150px;
+    height : 150px;
     border-radius: 50%;
     background-color: #003333;
     border: 2px solid white
@@ -181,7 +181,7 @@
 
   .operations{
     margin-left: 4%;
-    margin-top: -9%;
+    margin-top: -7%;
     width:60%;
 
 
