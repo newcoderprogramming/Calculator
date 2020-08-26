@@ -60,18 +60,19 @@
 
   .operations{
     display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
     margin-left: 23%;
     margin-top: 1.5%;
-    grid-template-columns: auto auto auto auto auto auto;
     margin-right: 50%;
   }
 
   .input{
+    display:grid;
+    grid-template-columns: auto auto auto;
     margin-left: 60%;
     margin-top: -27%;
     margin-right: 32%;
-    display:grid;
-    grid-template-columns: auto auto auto;
+
 
   }
 
