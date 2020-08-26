@@ -120,15 +120,13 @@
     border: 2px solid #000a1a;
     color:black
   }
-  
+
   .operations{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     margin-left: 4%;
     margin-top: 1%;
     width:auto;
-
-
   }
 
   .input{
@@ -137,14 +135,5 @@
     margin-left: 22%;
     margin-top: 2%;
     width:60%;
-
-
-
-
   }
-
-
-
-
-
 }
