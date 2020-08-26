@@ -12,14 +12,7 @@
       <h3 id="result">0</h3>
     </fieldset>
 
-
-        <!-- <br><br><br><br> -->
-
-
-
-
       <div class="operations">
-
 
           <button type="button" name="button" onclick="takeOperator(0)" class="inputOperators">+</button>
           <button type="button" name="button" onclick="takeOperator(1)" class="inputOperators">-</button>
@@ -35,26 +28,19 @@
           <button type="button" name="button" onclick="takeOperator(5)" class="inputOperators">x<sup>-n</sup></button>
           <button type="button" name="button" onclick="backSpace()" class="inputOperators">B</button>
 
+          <button type="button" name="button" onclick="squareRoot()" class="inputOperators">&#8730;</button> <!--sqrt-->
+          <button type="button" name="button" onclick="cubeRoot()" class="inputOperators">&#8731;</button> <!--cubeRoot-->
+          <button type="button" name="button" onclick="fourthRoot()" class="inputOperators">&#8732;</button> <!--fourthRoot-->
+          <button type="button" name="button" onclick="powerOfTen()" class="inputOperators">10<sup>x</sup></button>
+          <button type="button" name="button" onclick="powerOfTwo()" class="inputOperators">2<sup>x</sup></button>
+          <button type="button" name="button" onclick="ePower()" class="inputOperators">e<sup>x</sup></button>
 
-
-
-            <button type="button" name="button" onclick="squareRoot()" class="inputOperators">&#8730;</button> <!--sqrt-->
-            <button type="button" name="button" onclick="cubeRoot()" class="inputOperators">&#8731;</button> <!--cubeRoot-->
-            <button type="button" name="button" onclick="fourthRoot()" class="inputOperators">&#8732;</button> <!--fourthRoot-->
-            <button type="button" name="button" onclick="powerOfTen()" class="inputOperators">10<sup>x</sup></button>
-            <button type="button" name="button" onclick="powerOfTwo()" class="inputOperators">2<sup>x</sup></button>
-            <button type="button" name="button" onclick="ePower()" class="inputOperators">e<sup>x</sup></button>
-
-
-            <button type="button" name="button" onclick="factorial()"   class="inputOperators">x!</button>
-            <button type="button" name="button" onclick="logln()" class="inputOperators" id='lnlog'>ln</button>
-            <button type="button" name="button" onclick="e()"class="inputOperators">e</button>
-            <button type="button" name="button" onclick="pi()" class="inputOperators">&#8508;</button>
-            <button type="button" name="button" onclick="change()" class="inputOperators">#</button>
-            <button type="button" name="button" onclick="previous()" class="inputOperators">P</button>
-
-
-
+          <button type="button" name="button" onclick="factorial()"   class="inputOperators">x!</button>
+          <button type="button" name="button" onclick="logln()" class="inputOperators" id='lnlog'>ln</button>
+          <button type="button" name="button" onclick="e()"class="inputOperators">e</button>
+          <button type="button" name="button" onclick="pi()" class="inputOperators">&#8508;</button>
+          <button type="button" name="button" onclick="change()" class="inputOperators">#</button>
+          <button type="button" name="button" onclick="previous()" class="inputOperators">P</button>
 
           <button type="button" name="button" onclick="sinx()"  class="inputOperators" id='sinOrsini'>sin</button>
           <button type="button" name="button" onclick="cosx()"  class="inputOperators" id='cosOrcosi'>cos</button>
@@ -68,13 +54,11 @@
 
       </div>
 
-<!-- <br><br> -->
 
       <div class="input">
           <button type="button" name="button" onclick="takeInput(0)"  class='n'>7</button>
           <button type="button" name="button" onclick="takeInput(1)"  class='n'>8</button>
           <button type="button" name="button" onclick="takeInput(2)"  class='n'>9</button>
-
 
           <button type="button" name="button" onclick="takeInput(3)"  class="n">4</button>
           <button type="button" name="button" onclick="takeInput(4)"  class="n">5</button>
@@ -84,30 +68,13 @@
           <button type="button" name="button" onclick="takeInput(7)"  class="n">2</button>
           <button type="button" name="button" onclick="takeInput(8)"  class="n">3</button>
 
-
           <button type="button" name="button" onclick="fractional()"  class="n">.</button>
-          <button type="button" name="button" onclick="takeInput(10)" class="n" id='zero'>0</button>
+          <button type="button" name="button" onclick="takeInput(10)" class="n">0</button>
           <button type="button" name="button" onclick="result()"      class="n">=</button>
 
 
 
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <script type="text/javascript">
 
@@ -130,8 +97,6 @@
      var r = a.length;
      var minusInitial=0;
      var m=0;
-
-
 
     function takeInput(k){
       document.getElementById('clear').innerHTML='C'

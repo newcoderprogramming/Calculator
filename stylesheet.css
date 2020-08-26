@@ -170,11 +170,12 @@
   }
 
   .input{
+    display:grid;
+    grid-template-columns: auto auto auto;
     margin-left: 22%;
     margin-top: 2%;
     width:60%;
-    display:grid;
-    grid-template-columns: auto auto auto;
+
 
 
 
